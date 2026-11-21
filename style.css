@@ -1,0 +1,309 @@
+
+/* ==================================
+   GENERAL DESIGN
+================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #FFF8EF;
+    color: #493B46;
+    font-family: 'Lato', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* ==================================
+   HEADER
+================================== */
+
+header {
+    background: linear-gradient(135deg, #F8C8DC, #E6DDF5);
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    color: #754D70;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    color: #754D70;
+    font-size: 1.7rem;
+}
+
+h3 {
+    color: #754D70;
+    font-size: 1.3rem;
+}
+
+/* ==================================
+   NAVIGATION MENU
+================================== */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+nav a {
+    background-color: #FFF8EF;
+    color: #754D70;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid #B68BAA;
+    border-radius: 2rem;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background-color: #754D70;
+    color: #FFFFFF;
+}
+
+/* ==================================
+   MAIN CONTENT
+================================== */
+
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* ==================================
+   GENERAL SECTION CARDS
+================================== */
+
+section {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #E6DDF5;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px #00000010;
+}
+
+/* ==================================
+   ABOUT ME
+================================== */
+
+#about {
+    background-color: #FFFFFF;
+}
+
+#about h2 {
+    color: #754D70;
+    margin-bottom: 1.5rem;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 1rem;
+    border: 4px solid #F8C8DC;
+    flex-shrink: 0;
+}
+
+.about-container p {
+    flex: 1;
+}
+
+/* ==================================
+   THINGS I LOVE
+================================== */
+
+#love {
+    background-color: #F5EFFC;
+    padding: 2rem;
+    border: 1px solid #E5D8F5;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#love h2 {
+    color: #754D70;
+    margin-bottom: 1rem;
+}
+
+#love p {
+    line-height: 1.8;
+}
+
+/* ==================================
+   PASSION PROJECTS
+================================== */
+
+#projects {
+    background-color: #F0F7F0;
+    padding: 2rem;
+    border: 1px solid #D8E8D8;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#projects h2 {
+    color: #754D70;
+    margin-bottom: 1rem;
+}
+
+#projects h3 {
+    color: #754D70;
+    margin-bottom: 1rem;
+}
+
+#projects p {
+    line-height: 1.8;
+}
+
+/* ==================================
+   BAKING PHOTO GALLERY
+================================== */
+
+.baking-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.baking-gallery img {
+    width: 100%;
+    max-width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    border: 3px solid #F8C8DC;
+}
+
+/* ==================================
+   FOOTER / CONTACT
+================================== */
+
+footer {
+    background-color: #E6DDF5;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+footer h2 {
+    color: #754D70;
+    margin-top: 0;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* ==================================
+   MOBILE RESPONSIVE DESIGN
+================================== */
+
+@media (max-width: 600px) {
+
+    /* Header */
+
+    header {
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Main Content */
+
+    main {
+        margin: 1rem auto;
+        padding: 0 0.8rem;
+    }
+
+    /* Section Cards */
+
+    section {
+        padding: 1.2rem;
+    }
+
+    #love,
+    #projects {
+        padding: 1.2rem;
+    }
+
+    /* About Me */
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Baking Gallery */
+
+    .baking-gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .baking-gallery img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    /* Navigation */
+
+    nav {
+        gap: 0.5rem;
+    }
+
+    nav a {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+
+    footer {
+        padding: 1.5rem 1rem;
+    }
+}
